@@ -42,11 +42,11 @@ export const Home =()=>{
                 <Select onChange={handleStatusChange} options={statusData} />
             </Grid>
             <Grid item xs={6}>
-                <Notification mytime={3000} msg={`Hey ${name.label},
-                Congradulations!!! for your great achievemnet.`} />
+                <Notification mytime={3000} msg={status==="Pass" ? `Hey ${name.label},
+                Congradulations!!! for your great achievemnet.`: `Hi ${name.label}, Please connect with your College.`} />
             </Grid>
             <Grid item xs={6}>
-                <Notification mytime={5000} msg={`Dear Parent, Your ward ${name} has completed the Certification with PickupBiz Learning. We would like to congratulate you are your falimy....`} />
+                <Notification mytime={5000} msg={status==="Pass" ?`Dear Parent, Your ward ${name} has completed the Certification with PickupBiz Learning. We would like to congratulate you are your falimy....`:''} />
             </Grid>
             <Grid item xs={6}>
                 <ResultList studentData={passData} />
